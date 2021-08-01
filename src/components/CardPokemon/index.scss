@@ -1,0 +1,41 @@
+@import "/src/assets/scss/index.scss";
+
+.pokemon-card {
+    border-radius: 5px;
+    box-shadow: 0.1rem 0.3rem 0.3rem 0.2rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    transition: transform .3s;
+
+    &:hover {
+        transform: scale(1.10);
+    }
+
+    &__data {
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__name {
+        font-size: 16px;
+        color: #60a5fa;
+    }
+
+    &__image {
+        margin-left: auto;
+        padding: 1rem;
+        margin-right: 1rem;
+        width: 9rem;
+    }
+
+    &__number {
+        font-size: 14px;
+        font-weight: 600;
+        position: absolute;
+        right: 6px;
+        top: 4px;
+    }
+}

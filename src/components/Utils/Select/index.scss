@@ -1,0 +1,14 @@
+.select {
+
+    display: flex;
+    margin: 1.5rem auto;
+    width: 10rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    font-size: 14px;
+    color: #999;
+
+    &:focus {
+        outline: none;
+    }
+}
