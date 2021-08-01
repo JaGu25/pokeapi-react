@@ -5,6 +5,7 @@ import './index.scss'
 interface IProps {
     show?: boolean,
     showFooter?: boolean,
+    showHeader?: boolean,
     handleCloseModal?: (e?: any) => void,
     ContentComponent: React.FC
 }
@@ -12,16 +13,12 @@ interface IProps {
 const Modal: React.FC<IProps> = ({
     show = false,
     showFooter = false,
+    showHeader = false,
     handleCloseModal = () => { },
     ContentComponent
 }) => {
 
     const ref = React.useRef() as React.LegacyRef<HTMLDivElement>;
-    const { pokemon } = useContext(PokemonContext)
-
-    const capitalizeFirstLetter = (word: string) => {
-        return word.charAt(0).toUpperCase() + word.slice(1);
-    }
 
     useEffect(() => {
         const checkIfClickedOutside = (e: any) => {
@@ -41,7 +38,7 @@ const Modal: React.FC<IProps> = ({
             <div className="modal__content" ref={ref}>
                 <div className="modal__header">
                     <span className="close" onClick={handleCloseModal}>&times;</span>
-                    <h2 className="title">{capitalizeFirstLetter(pokemon?.name || '')}</h2>
+                    {showHeader && (<h2 className="title"></h2>)}
                 </div>
                 <div className="modal__body">
                     <ContentComponent />

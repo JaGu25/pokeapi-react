@@ -2,9 +2,7 @@ import axios from 'axios'
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import ChipTypePokemon from '../ChipTypePokemon'
-import { Img } from 'react-image'
 import './index.scss'
-import Loading from '../Utils/Loading'
 
 interface IProps {
     data: {
@@ -52,15 +50,6 @@ const CardPokemon: React.FC<IProps> = ({
                     }
                 </div>
             </div>
-            {/* <Img
-                className="pokemon-card__image"
-                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon?.id}.png`}
-                loader={
-                    <div className="pokemon-card__image">
-                        <i className="fas fa-spinner fa-spin"></i>
-                    </div>
-                }
-            /> */}
             <img className="pokemon-card__image" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon?.id}.png`} alt="Pokemon" />
             <span className="pokemon-card__number">#{pokemon?.id}</span>
         </div>

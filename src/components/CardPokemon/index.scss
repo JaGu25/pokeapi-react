@@ -29,6 +29,9 @@
         padding: 1rem;
         margin-right: 1rem;
         width: 9rem;
+        @include responsive(land) {
+            width: 7.5rem;
+        }
     }
 
     &__number {

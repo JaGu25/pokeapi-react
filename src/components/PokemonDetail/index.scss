@@ -1,0 +1,98 @@
+@import "/src/assets/scss/index.scss";
+
+.pokemon-detail {
+    display: flex;
+    align-items: center;
+    color: #000;
+
+    @include responsive(tablet) {
+        flex-direction: column;
+    }
+
+    &__image {
+        width: 50%;
+        @include responsive(phone) {
+            width: 100%;
+        }
+    }
+
+    &__content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__name {
+        color: #60a5fa;
+        font-size: 30px;
+        font-weight: 700;
+
+        @include responsive(tablet) {
+            font-size: 18px;
+        }
+
+        span {
+            font-weight: 300;
+        }
+    }
+
+    &__desc {
+        padding: 0.5rem 0rem;
+    }
+
+    &__subtitle {
+        margin-top: 1rem;
+        font-size: 18px;
+        padding: 0.5rem 0rem;
+    }
+
+    &__types {
+        padding: 0.5rem 0rem;
+        span {
+            font-size: 18px;
+        }
+    }
+
+    &__abilities {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__chips {
+        font-weight: 700;
+        font-size: 16px;
+        padding: 0.3rem 1.5rem;
+        margin: 0rem 0.5rem 0.5rem 0.5rem;
+        background-color: $color-grey-light-1;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        &--border {
+            border: 0.5px solid #60a5fa;
+        }
+    }
+
+    &__properties {
+        margin-top: 2rem;
+        display: flex;
+        
+        .content {
+            text-align: center;
+        }
+
+        h3 {
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+}

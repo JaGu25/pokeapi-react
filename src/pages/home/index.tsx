@@ -44,7 +44,7 @@ const Home: React.FC = () => {
     }
 
     const handlePokemonCardEvent = (id: number) => {
-        if (id != currentId) {
+        if (id !== currentId) {
             setPokemonId(id)
         }
         setShowModal(true);
